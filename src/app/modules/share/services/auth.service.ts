@@ -22,4 +22,11 @@ export class AuthService {
       password: password,
     });
   }
+
+  public login(email: any, password: any): Observable<any> {
+    return this.http.post(`http://localhost:8000/login`, {
+      email: email,
+      password: password,
+    });
+  }
 }

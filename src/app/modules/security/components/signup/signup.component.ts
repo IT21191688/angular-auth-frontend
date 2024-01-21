@@ -29,6 +29,7 @@ export class SignupComponent {
         },
         (error) => {
           console.error('Error creating user:', error);
+          this.router.navigate(['/signup']);
         }
       );
   }
