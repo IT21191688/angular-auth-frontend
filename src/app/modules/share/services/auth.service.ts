@@ -25,7 +25,7 @@ export class AuthService {
 
   public login(email: any, password: any): Observable<any> {
     return this.http.post(`http://localhost:8000/login`, {
-      email: email,
+      username: email,
       password: password,
     });
   }
