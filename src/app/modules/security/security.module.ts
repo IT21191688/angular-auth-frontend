@@ -5,17 +5,10 @@ import { SecurityRoutingModule } from './security-routing.module';
 import { SecurityComponent } from './security.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    SecurityComponent,
-    LoginComponent,
-    SignupComponent
-  ],
-  imports: [
-    CommonModule,
-    SecurityRoutingModule
-  ]
+  declarations: [SecurityComponent, LoginComponent, SignupComponent],
+  imports: [CommonModule, SecurityRoutingModule, FormsModule],
 })
-export class SecurityModule { }
+export class SecurityModule {}

@@ -1,20 +1,39 @@
 <!-- signup.component.html -->
 
-<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-    <div class="form-group">
-        <label for="firstName">Full Name:</label>
-        <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+<div class="container mt-5 text-center">
+
+
+    <div class="row justify-content-center">
+        <h1>Welcome To healthcare System</h1>
     </div>
 
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
-    </div>
 
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
-    </div>
 
-    <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
-</form>
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <form class="card p-4" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+                <h2 class="text-center mb-4">Sign Up</h2>
+
+                <div class="form-group">
+                    <label for="firstName">Full Name:</label>
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" class="form-control"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="user.password"
+                        class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" [disabled]="!signupForm.valid">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
