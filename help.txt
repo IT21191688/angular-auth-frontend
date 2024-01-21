@@ -1,0 +1,1 @@
+ng g module doctor --route doctor --module app.module //create doctor module and add route
