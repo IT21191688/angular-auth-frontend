@@ -32,9 +32,19 @@ export class LoginComponent {
 
           if (authToken !== null && authToken !== undefined) {
             console.log('Login successful. Token:', authToken);
-            this.toastMessage.showSuccess('Login successful', 'Success');
+            //this.toastMessage.showSuccess('Login successful', 'Success');
+
             this.cookieManagerService.setToken(authToken);
-            // this.router.navigate(['/signup']);
+
+            if (response.data.role === 'ROLE_ADMIN') {
+              alert('Login Success Admin');
+              console.log('Admin Success');
+              // this.router.navigate(['/admindashboard']);
+            } else {
+              alert('Login Success User');
+              //this.router.navigate(['/homepage']);
+            }
+            //
           }
         } else {
           console.error('Response or headers are null or undefined.');
